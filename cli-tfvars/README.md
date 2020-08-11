@@ -1,1 +1,1 @@
-![cli-args](./docs/cli-args.png)
+![cli-tfvars](./docs/cli-tfvars.png)
