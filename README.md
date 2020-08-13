@@ -1,5 +1,5 @@
 1. [cli-tfvars](./cli-tfvars)
-2. config  <small>_(personal preference)_</small>
+2. config
     * [yaml](./yaml)
     * [json](./json)
 3. [locals-v2](./locals-v2)
