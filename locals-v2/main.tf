@@ -3,5 +3,5 @@ resource "random_pet" "this" {
     ts = timestamp()
   }
   
-  prefix = local.pet_prefix[var.tf_workspace]
+  prefix = local.workspace_variables.pet_prefix
 }
