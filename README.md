@@ -4,12 +4,7 @@ However, in Terraform Cloud (TFC) / Terraform Enterprise (TFE), the value of `te
 
 Even though some of the functionality has changed between open source and TFC/TFE, there are ways to mimick the capabilities you may be used to. Below will outline how one can go about configuring the backend and selecting the workspace of choice, while each example's `README.md` will go through how to supply variables based on the workspace that was chosen.
 
->>>
-**Note:** For demonstration purposes, each example will assume that there are two workspaces:
-
-1. `test`
-2. `prod`
->>
+> **Note:** For demonstration purposes, each example will assume that there are two workspaces:<br>  1. `test`<br>  2. `prod`
 
 ## Configuring backend
 
