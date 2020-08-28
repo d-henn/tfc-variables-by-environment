@@ -14,7 +14,7 @@ Modify the workspace to take in the proper `.tfvars` file.
 2. Navigate to `Variables`.
 3. Add / Edit variables under `Environment Variables` section.
     1. Use [`TF_CLI_ARGS_plan`](https://www.terraform.io/docs/commands/environment-variables.html#tf_cli_args-and-tf_cli_args_name) as the key.
-    2. Make the value the command line flag used for the cli `-var-file=workspace/test.env.tfvars`.
+    2. The value will be the command line flag used for the cli `-var-file=workspace/test.env.tfvars`.
   
 > **Warning:** You cannot use the name `terraform.tfvars` as this is reserved by TFC/TFE and any variables definded under `Terraform Variables` section will take precedence over your custom variables should they collide. 
   
