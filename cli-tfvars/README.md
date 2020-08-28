@@ -20,6 +20,18 @@ Modify the workspace to take in the proper `.tfvars` file.
   
 ![cli-tfvars](./docs/cli-tfvars.png)
 
+## Usage
+
+```tf
+resource "random_pet" "this" {
+  keepers = {
+    ts = timestamp()
+  }
+  
+  prefix = var.pet_prefix # use variable
+}
+```
+
 ## Pros & Cons
 
 | Pros | Cons |
