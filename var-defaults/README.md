@@ -1,5 +1,7 @@
 ## Pros & Cons
 
+> These are not all inclusive.
+
 | Pros | Cons |
 | ---- | ---- |
 | Fairly easy to understand/use. | Can override defaults which could break the map lookup. |
