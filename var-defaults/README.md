@@ -1,6 +1,6 @@
 ## Config
 
-Configure the variable in question with a default map, with the key as your expected workspace value.
+Configure the variable in question with a default map, defining the key as your expected workspace value.
 
 ```tf
 variable "pet_prefix" {
