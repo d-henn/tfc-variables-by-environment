@@ -1,1 +1,0 @@
-pet_prefix = "test-pet"
