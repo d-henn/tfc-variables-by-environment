@@ -10,7 +10,7 @@ Leverage the built in use of [`<name>.tfvars`](https://www.terraform.io/docs/con
 
 Modify the workspace to take in the proper `.tfvars` file.
 
-1. Select `workspace`.
+1. Select workspace in question.
 2. Navigate to `Variables`.
 3. Add / Edit `Environment Variables` section.
   1. Use [`TF_CLI_ARGS_plan`](https://www.terraform.io/docs/commands/environment-variables.html#tf_cli_args-and-tf_cli_args_name) as the key.
