@@ -11,6 +11,8 @@ Leverage built in workspace variables in Terraform Cloud (TFC) / Terraform Enter
 ## Usage
 
 ```tf
+variable "pet_prefix" {}
+
 resource "random_pet" "this" {
   keepers = {
     ts = timestamp()
