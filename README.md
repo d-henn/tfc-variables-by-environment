@@ -27,13 +27,13 @@ terraform {
 
 There are two main approaches to selecting a workspace in TFC/TFE. 
 
-The first being in interactive mode. This is normally done when a user is present and needing to interact with the console, such as on your local machine.
+The first being in interactive mode. This is normally done when a user is present and needing to interact with the console, such as on your local machine. You can use the built in [`terraform workspace select`](https://www.terraform.io/docs/commands/workspace/select.html#usage) command to select the proper workspace.
 
 ```bash
 $ terraform workspace select test
 ```
 
-The second approach may be when Terraform is ran in some automated fashion, such as your CI/CD pipeline.
+The second approach may be when Terraform is ran in some automated fashion, such as your CI/CD pipeline. You can leverage the [`TF_WORKSPACE`](https://learn.hashicorp.com/tutorials/terraform/automate-terraform#multi-environment-deployment) environment variable to select the proper workspace.
 
 ```bash
 $ export TF_WORKSPACE=test
