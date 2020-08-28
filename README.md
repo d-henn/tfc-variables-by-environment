@@ -4,8 +4,6 @@ However, in Terraform Cloud (TFC) / Terraform Enterprise (TFE), the value of `te
 
 Even though some of the functionality has changed between open source and TFC/TFE, there are ways to mimick the capabilities you may be used to. Below will outline how one can go about configuring the backend and selecting the workspace of choice, while each example's `README.md` will go through how to supply variables based on the workspace that was chosen.
 
-> **Note:** For demonstration purposes, each example will assume that there are two workspaces: `test` & `prod`.
-
 ## Configuring backend
 
 In order to tell the backend to switch between workspaces, you can use the [`workspaces.prefix`](https://www.terraform.io/docs/backends/types/remote.html#prefix) attribute.
@@ -44,6 +42,8 @@ $ export TF_WORKSPACE=test
 ## Examples
 
 Ultimately, there are endless possibilities to solve the problem from above. But the examples listed below were some of the approaches I find worthy of mentioning and are ordered by my personal preference.
+
+> **Note:** For demonstration purposes, each example will assume that there are two workspaces: `test` & `prod`.
 
 1. [cli-tfvars](./cli-tfvars)
 2. decode config
