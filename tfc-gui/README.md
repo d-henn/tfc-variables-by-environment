@@ -30,3 +30,4 @@ resource "random_pet" "this" {
 | ---- | ---- |
 | Works out of the box. | No versioning. |
 | Easy to understand/use. | No formal change/review process such as Pull Requests. |
+| Less likely to fat finger and mess up variables per environment. | |
