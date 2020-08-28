@@ -1,12 +1,14 @@
 Many people I know use the popular Terraform provided variable `terraform.workspace` or powerful `-var-file=...` command line flag to switch variable values based on environment/workspace.
 
-However, in Terraform Cloud (TFC) / Terraform Enterprise (TFE), the value of `terraform.workspace` will always evaluate to [`default`](https://www.terraform.io/docs/state/workspaces.html#workspace-internals) and you cannot provide a var file to the command line _(sort of)_. This is a problem for many as they migrate to these remote backends, as it messes up their current workflow. 
+However, in Terraform Cloud (TFC) / Terraform Enterprise (TFE), the value of `terraform.workspace` will always evaluate to [`default`](https://www.terraform.io/docs/backends/types/remote.html#workspaces) and you cannot provide a var file to the command line _(sort of)_. This is a problem for many as they migrate to these remote backends, as it messes up their current workflow. 
 
 Even though some of the functionality has changed between open source and TFC/TFE, there are ways to mimick the capabilities you may be used to. Below will outline how one can go about configuring the backend and selecting the workspace of choice, while each example's `README.md` will go through how to supply variables based on the workspace that was chosen.
 
 > **Note:** For demonstration purposes, each example will assume that there are two workspaces: `test` & `prod`.
 
 ## Configuring backend
+
+In order to tell the backend to switch between workspaces, you can use the [`workspaces.prefix`](https://www.terraform.io/docs/backends/types/remote.html#prefix) attribute.
 
 ```tf
 terraform {
