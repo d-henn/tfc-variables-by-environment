@@ -51,4 +51,3 @@ Ultimately, there are endless possibilities to solve the problem from above. But
 4. [locals-v2](./locals-v2)
 5. [var-defaults](./var-defaults)
 6. [tfc-gui](./tfc-gui)
-7. [auto-tfvars](./auto-tfvars)
