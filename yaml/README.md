@@ -49,4 +49,4 @@ resource "random_pet" "this" {
 | ---- | ---- |
 | YAML file as configuration. Many people like this as it was built with configuration in mind. | Context switching; you are no longer using HashiCorp Configuration Language [(HCL)](https://www.terraform.io/docs/configuration/index.html). |
 | Easily switch variables based on environment. | No variable validation. |
-| | No variable type checking. |
+| Empowers flat file structure; no folder nesting. | No variable type checking. |
