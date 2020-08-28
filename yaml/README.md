@@ -47,5 +47,5 @@ resource "random_pet" "this" {
 
 | Pros | Cons |
 | ---- | ---- |
-| YAML file as configuration. Many people like this as it was built with configuration in mind. | Context switching as you are no longer using HashiCorp Configuration Language [(HCL)](https://www.terraform.io/docs/configuration/index.html). |
+| YAML file as configuration. Many people like this as it was built with configuration in mind. | Context switching; you are no longer using HashiCorp Configuration Language [(HCL)](https://www.terraform.io/docs/configuration/index.html). |
 | | No variable validation or type checking. |
