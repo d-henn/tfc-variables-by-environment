@@ -22,6 +22,8 @@ Modify the workspace to take in the proper `.tfvars` file.
 
 ## Usage
 
+Use the variable like any other variable in open source.
+
 ```tf
 resource "random_pet" "this" {
   keepers = {
