@@ -26,7 +26,7 @@ Select proper variable file based on environment/workspace.
 
 ```tf
 locals {
-  workspace_variables = yamldecode(file("${path.root}/workspaces/${var.tf_workspace}_variables.yaml")) # file evaluates to test_variables.yaml
+  workspace_variables = yamldecode(file("${path.root}/workspaces/${var.tf_workspace}_variables.yaml")) # evaluates to test_variables.yaml
 }
 ```
 
