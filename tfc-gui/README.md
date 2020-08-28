@@ -4,7 +4,7 @@ Leverage built in workspace variables in Terraform Cloud (TFC) / Terraform Enter
 
 1. Select workspace in question.
 2. Navigate to `Variables`.
-3. Add / Edit variables under `Terraform Variables`.
+3. Add / Edit variables under `Terraform Variables` section.
 
 ![tfc-gui](./docs/tfc-gui.png)
 
