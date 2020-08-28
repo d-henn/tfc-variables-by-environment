@@ -4,10 +4,24 @@ This approach essentially has three parts:
 2. [Load Config File](#load-file)
 3. [Select Proper Config](#select-proper-config)
 
-1. Create `yaml` files to house the configuration for variables. 
-2. Leverage the built in Terraform [`yamldecode`](https://www.terraform.io/docs/configuration/functions/yamldecode.html) and [`file`](https://www.terraform.io/docs/configuration/functions/file.html) functions to load in the file. 
-3. Select proper variable file based on environment/workspace.
+## Config File 
 
+Create `yaml` files to house the configuration for variables. 
+
+- [**test**_variables.yaml](./workspaces/test_variables.yaml)
+- [**prod**_variables.yaml](./workspaces/prod_variables.yaml))
+
+## Load Config File
+
+Leverage the built in Terraform [`yamldecode`](https://www.terraform.io/docs/configuration/functions/yamldecode.html) and [`file`](https://www.terraform.io/docs/configuration/functions/file.html) functions to load in the file.
+
+```tf
+yamldecode(file("${path.root}/workspaces/<some-var-file>.yaml"))
+```
+
+## Select Proper Config
+
+Select proper variable file based on environment/workspace.
 
 ```tf
 locals {
