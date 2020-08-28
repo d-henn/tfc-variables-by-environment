@@ -47,4 +47,5 @@ resource "random_pet" "this" {
 
 | Pros | Cons |
 | ---- | ---- |
-| YAML file as configuration. | No variable validation or type checking. |
+| YAML file as configuration. | Context switching as you are no longer using HashiCorp Configuration Language [(HCL)](https://www.terraform.io/docs/configuration/index.html) |
+| | No variable validation or type checking |
