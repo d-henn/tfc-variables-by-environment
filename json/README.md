@@ -13,7 +13,7 @@ Leverage the built in Terraform [`jsondecode`](https://www.terraform.io/docs/con
 jsondecode(file("${path.root}/workspaces/<some-var-file>.json"))
 ```
 
-## Interpolation
+## Workspace variable
 
 Since you can no longer use `terraform.workspace` for meaningful interpolation, you can supply your own custom variable that will denote which workspace has been chosen. In this example, that variable is defined as `variable "tf_workspace" {...}`. To supply the variable, you can simply add it into your workspace variables in Terraform Cloud/Terraform Enterprise like so.
 
