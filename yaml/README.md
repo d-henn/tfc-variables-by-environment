@@ -1,4 +1,3 @@
-
 ## Config file 
 
 This approach uses `yaml` files to house the configuration for variables. 
@@ -43,8 +42,9 @@ resource "random_pet" "this" {
 ```
 
 ## Pros & Cons
+
 > These are not all inclusive.
 
 | Pros | Cons |
 | ---- | ---- |
-| YAML file as configuration. Many people like this as it was built for config. | No variable validation or type checking .|
+| YAML file as configuration. | No variable validation or type checking. |
