@@ -3,8 +3,8 @@
 
 This approach uses `yaml` files to house the configuration for variables. 
 
-- [**test**_variables.yaml](./workspaces/test_variables.yaml)
-- [**prod**_variables.yaml](./workspaces/prod_variables.yaml)
+- [workspaces/**test**_variables.yaml](./workspaces/test_variables.yaml)
+- [workspaces/**prod**_variables.yaml](./workspaces/prod_variables.yaml)
 
 ## Load config
 
