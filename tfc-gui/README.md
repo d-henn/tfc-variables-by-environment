@@ -24,6 +24,8 @@ resource "random_pet" "this" {
 
 ## Pros & Cons
 
+> These are not all inclusive.
+
 | Pros | Cons |
 | ---- | ---- |
 | Works out of the box. | No versioning. |
