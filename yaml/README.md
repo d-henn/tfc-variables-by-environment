@@ -17,6 +17,12 @@ yamldecode(file("${path.root}/workspaces/<some-var-file>.yaml"))
 
 Since you can no longer use `terraform.workspace` for meaningful input, you can supply your own custom variable that will denote which workspace has been chosen. In this example, that variable is defined as `variable "tf_workspace" {...}`. To supply the variable, you can simply add it into your workspace variables in Terraform Cloud/Terraform Enterprise like so.
 
+1. Select workspace in question.
+2. Navigate to `Variables`.
+3. Add / Edit variables under `Terraform Variables` section.
+    1. Make the key whatever you are using to distinguish the workspace on, e.g `tf_workspace`.
+    2. Make the value the workspace, e.g, `test`.
+    
 ![tf_workspace](./docs/tf_workspace.png)
 
 ## Interpolate workspace for config
