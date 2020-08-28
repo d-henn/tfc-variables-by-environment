@@ -41,7 +41,7 @@ $ export TF_WORKSPACE=test
 
 ## Examples
 
-Ultimately, there are endless possibilities to solve the problem from above. But the examples listed below were some of the approaches I find worthy of mentioning and are ordered by my personal preference.
+Ultimately, there are endless possibilities to solve the problem from above. But the examples listed below are some of the approaches I find worthy of mentioning and are ordered by my personal preference.
 
 > **Note:** For demonstration purposes, each example will assume that there are two workspaces: `test` & `prod`.
 
