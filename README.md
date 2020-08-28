@@ -44,7 +44,7 @@ $ export TF_WORKSPACE=test
 Ultimately, there are endless possibilities to solve the problem from above. But the examples listed below were some of the approaches I find worthy of mentioning and are ordered by my personal preference.
 
 1. [cli-tfvars](./cli-tfvars)
-2. config
+2. decode config
     * [yaml](./yaml)
     * [json](./json)
 3. [locals-v1](./locals-v1)
