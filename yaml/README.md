@@ -47,4 +47,4 @@ resource "random_pet" "this" {
 
 | Pros | Cons |
 | ---- | ---- |
-| a | b |
+| YAML file as configuration. Many people like this as it was built for config. | No variable validation or type checking .|
