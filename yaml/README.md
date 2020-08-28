@@ -1,42 +1,46 @@
-This approach essentially has three parts:
 
-1. [File For Configuration](#config-files)
-2. [Load Config File](#load-file)
-3. [Select Proper Config](#select-proper-config)
+## Config file 
 
-##### Config file 
-
-Create `yaml` files to house the configuration for variables. 
+This approach uses `yaml` files to house the configuration for variables. 
 
 - [**test**_variables.yaml](./workspaces/test_variables.yaml)
 - [**prod**_variables.yaml](./workspaces/prod_variables.yaml)
 
-##### Load config file
+## Load config
 
-Leverage the built in Terraform [`yamldecode`](https://www.terraform.io/docs/configuration/functions/yamldecode.html) and [`file`](https://www.terraform.io/docs/configuration/functions/file.html) functions to load in the file.
+Leverage the built in Terraform [`yamldecode`](https://www.terraform.io/docs/configuration/functions/yamldecode.html) and [`file`](https://www.terraform.io/docs/configuration/functions/file.html) functions to load in the configuration files.
 
 ```tf
 yamldecode(file("${path.root}/workspaces/<some-var-file>.yaml"))
 ```
 
-##### Select proper config
+##### Interpolation
+
+Since you can no longer use `terraform.workspace` for meaningful interpolation, you can supply your own custom variable that will denote which workspace has been chosen. In this example, that variable is defined as `variable "tf_workspace" {...}`. To supply the variable, you can simply add it into your workspace variables in Terraform Cloud/Terraform Enterprise like so.
+
+![tf_workspace](./docs/tf_workspace.png)
+
+## Interpolate workspace for config
 
 Select proper variable file based on environment/workspace.
 
 ```tf
 locals {
-  workspace_variables = yamldecode(file("${path.root}/workspaces/${var.tf_workspace}_variables.yaml"))
+  workspace_variables = yamldecode(file("${path.root}/workspaces/${var.tf_workspace}_variables.yaml")) # file evaluates to test_variables.yaml
 }
 ```
 
-##### Provide variable for selection
+## Usage
 
-
-Instead of using `terraform.workspace` for interpolation, you can by supplying your own custom variable that will denote which workspace has been selected. In this example, that variable is defined as `variable "tf_workspace {...}`. To supply the variable, you can simply add it into your workspace variables in TFC/TFE like so.
-
-![tf_workspace](./docs/tf_workspace.png)
-
-Since `test` was selected as the workspace of choice, _Terraform_ will now interpolate `${var.tf_workspace}_variables.yaml` as `test_variables.yaml`.
+```tf
+resource "random_pet" "this" {
+  keepers = {
+    ts = timestamp()
+  }
+  
+  prefix = local.workspace_variables.pet_prefix # using the variable
+}
+```
 
 ## Pros & Cons
 > These are not all inclusive.
