@@ -25,4 +25,4 @@ resource "random_pet" "this" {
 | Pros | Cons |
 | ---- | ---- |
 | Works out of the box. | No versioning. |
-| Easy to understand/use. | No formal change process such as Pull Requests. |
+| Easy to understand/use. | No formal change/review process such as Pull Requests. |
