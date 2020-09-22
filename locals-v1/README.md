@@ -1,6 +1,6 @@
 ## Config
 
-Lookup variables using built in `map[key]` function.
+Configure a map for the variable in question, the key(s) being the `tf_workspace` variable being passed in per environment. In this case our workspaces coincide with `test` & `prod`.
 
 ```tf
 locals {
